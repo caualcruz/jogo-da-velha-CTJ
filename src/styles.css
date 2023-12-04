@@ -1,11 +1,15 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 body {
   font-family: sans-serif;
   margin: 20px;
+  height: 100vh;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -63,12 +67,16 @@ body {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 50px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
   width: 34px;
+}
+
+.allC{
+  height: 400px;
 }
 
 .board-row:after {
