@@ -77,7 +77,7 @@ export default function Game() {
     if (move > 0) {
       description = 'Ir para a rodada #' + move;
     } else {
-      description = 'Ir para o início do jogo';
+      description = 'Começar';
     }
     return (
       <li key={move}>
