@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
 
-function Square({ value, onSquareClick }) {
+function  Square({ value, onSquareClick }) {
   return (
      <Button className='square' variant="outlined" onClick={onSquareClick}>{value}</Button>
   );
@@ -36,7 +36,7 @@ function Board({ xIsNext, squares, onPlay }) {
       
         <div className="status">{status}</div>
         <div className="board-row">
-          <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+          <Square value={squares[0]}  onSquareClick={() => handleClick(0)} />
           <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
           <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
         </div>

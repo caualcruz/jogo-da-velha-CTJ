@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(70, 70, 70);
 }
 
 h1 {
@@ -61,22 +62,7 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
   height: 50px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.allC{
-  height: 400px;
 }
 
 .board-row:after {
@@ -85,8 +71,14 @@ body {
   display: table;
 }
 
+.board-row{
+  display: flex;
+  margin-left: 21vh;
+  
+}
+
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 10vh;
 }
 .game {
   display: flex;
@@ -98,5 +90,12 @@ body {
 }
 
 .allC{
-  box-shadow: 0 0.5rem 0.5rem 0.5rem blue; 
+  background-color: rgb(250, 250, 250);
+  width: 600px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 7px;
+
 }
