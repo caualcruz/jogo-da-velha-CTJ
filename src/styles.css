@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(49, 49, 49);
 }
 
 h1 {
@@ -44,7 +44,7 @@ h6 {
 }
 
 code {
-  font-size: 1.2em;
+  font-size: 1.2em; 
 }
 
 ul {
@@ -62,7 +62,9 @@ body {
 }
 
 .square {
-  height: 50px;
+  width: 80px;
+  height: 80px;
+  color: black;
 }
 
 .board-row:after {
@@ -71,10 +73,10 @@ body {
   display: table;
 }
 
-.board-row{
-  display: flex;
-  margin-left: 21vh;
-  
+.board-row{ 
+  display: flex;  
+  margin-left: 24vh;
+  color: black;
 }
 
 .status {
@@ -83,6 +85,7 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  
 }
 
 .game-info {
@@ -91,8 +94,8 @@ body {
 
 .allC{
   background-color: rgb(250, 250, 250);
-  width: 600px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   justify-content: center;
   align-items: center;
   text-align: center;

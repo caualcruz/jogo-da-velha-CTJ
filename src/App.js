@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function  Square({ value, onSquareClick }) {
   return (
-     <Button className='square' variant="outlined" onClick={onSquareClick}>{value}</Button>
+    <Button variant="contained" className='square border border-black' onClick={onSquareClick}>{value}</Button>
   );
 }
 
