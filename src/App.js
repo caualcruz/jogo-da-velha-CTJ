@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import * as React from 'react';
+import { Box, ThemeProvider } from '@mui/system';
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
 
-function  Square({ value, onSquareClick }) {
+function Square({ value, onSquareClick }) {
   return (
-     <Button className='square' variant="outlined" onClick={onSquareClick}>{value}</Button>
+    <Button className='square' variant="outlined" onClick={onSquareClick}>{value}</Button>
+
   );
 }
 
@@ -24,33 +28,33 @@ function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = 'VENCEDOR: ' + winner;
+    status = 'Winner: ' + winner;
   } else {
-    status = 'VEZ DE: ' + (xIsNext ? 'X' : 'O');
+    status = 'Vez de: ' + (xIsNext ? 'X' : 'O');
+
   }
 
   return (
     <>
-    <div className="allC">
-      
-        <div className="status">{status}</div>
-        <div className="board-row">
-          <Square value={squares[0]}  onSquareClick={() => handleClick(0)} />
-          <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-          <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        </div>
-        <div className="board-row">
-          <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-          <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-          <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-        </div>
-        <div className="board-row">
-          <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-          <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-          <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-        </div>
+      <div className="allC">
+            <div className="status">{status}</div>
+            <div className="board-row">
+              <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+              <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+              <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+            </div>
+            <div className="board-row">
+              <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+              <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+              <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+            </div>
+            <div className="board-row">
+              <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+              <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+              <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+            </div>
     
-    </div>
+          </div>
     </>
   );
 }
@@ -91,7 +95,7 @@ export default function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-        <ul>{moves}</ul>
+        <ol>{moves}</ol>
       </div>
     </div>
   );

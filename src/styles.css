@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(70, 70, 70);
+
 }
 
 h1 {
@@ -62,7 +63,24 @@ body {
 }
 
 .square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
   height: 50px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  height: 50px;
+
+}
+
+.allC{
+  height: 400px;
 }
 
 .board-row:after {
