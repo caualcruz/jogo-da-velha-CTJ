@@ -7,6 +7,7 @@ import { Box, ThemeProvider } from '@mui/system';
 function Square({ value, onSquareClick }) {
   return (
     <Button className='square' variant="outlined" onClick={onSquareClick}>{value}</Button>
+
   );
 }
 
@@ -30,6 +31,7 @@ function Board({ xIsNext, squares, onPlay }) {
     status = 'Winner: ' + winner;
   } else {
     status = 'Vez de: ' + (xIsNext ? 'X' : 'O');
+
   }
 
   return (
@@ -53,8 +55,6 @@ function Board({ xIsNext, squares, onPlay }) {
             </div>
     
           </div>
-
-
     </>
   );
 }
